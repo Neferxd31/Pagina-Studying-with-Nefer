@@ -1,90 +1,126 @@
-/* inicio.css */
+/* inicio.css - Versión Profesional Mejorada */
 
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-image: url(../source/img/fondo1.jpg);
+/* 1. Definición de Variables para consistencia (Tu paleta original) */
+:root {
+    --color-header-bg: #585858;
+    --color-text-light: #ffffff;
+    --color-text-muted: #e5e5e5;
+    --color-text-dark: #333333;
+    --color-card-bg: #f2f2f2; /* El gris claro original de tus artículos */
+    --color-accent-hover: #ff6600; /* El naranja de tus botones */
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius-card: 12px;
 }
 
+/* 2. Estilos Base Globales */
+* {
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+body {
+    /* Usamos una pila de fuentes de sistema moderna y limpia */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../source/img/fondo1.jpg);
+    background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll (efecto premium) */
+    background-size: cover;
+    color: var(--color-text-dark);
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* 3. Header y Navegación */
 header {
-    background-color: #585858;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--color-header-bg);
+    color: var(--color-text-light);
+    padding: 1rem 5%; /* Más espacio lateral */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Separa logo y nav a los extremos */
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Sombra suave bajo el header */
+    position: sticky; /* Opcional: deja el menú pegado arriba */
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     display: flex; 
-    align-items: center; 
+    align-items: center;
+    gap: 15px; /* Espacio consistente entre imagen y texto */
 }
 
 .logo img {
-    width: 60px;
-    height: auto;
+    width: 55px; /* Ligeramente más pequeño y elegante */
+    height: 55px;
     border-radius: 50%;
-}
-
-.logo a{
-    text-decoration: none;
-    color: #e5e5e5;
-}
-
-.logo a:hover{
-    color: #ffffff;
+    border: 2px solid var(--color-accent-hover); /* Un toque de color al logo */
+    object-fit: cover;
 }
 
 .logo_titulo {
-   margin-left: 15px;
+   margin-left: 0; /* Eliminamos margen innecesario por el gap */
 }
 
-nav {
-    display: flex;
-    justify-content: center;
+.logo_titulo h2 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--color-text-light);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
 }
 
-nav li{
-    margin: 0 15px;
+nav li {
+    margin: 0; /* Eliminamos márgenes antiguos */
     display: inline;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    
 }
 
+/* Estilo de enlaces de navegación más limpio */
 nav a {
     text-decoration: none;
-    color: #000000;
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 15%;
-    
+    color: var(--color-text-light); /* Texto blanco limpio */
+    background-color: transparent; /* Eliminamos el fondo blanco antiguo */
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
+/* Efecto hover profesional: línea inferior sutil o cambio de fondo suave */
 nav a:hover {
-    color: #d7d7d7;
-    background-color: #909090;
+    color: var(--color-accent-hover);
+    background-color: rgba(255,255,255,0.1); /* Fondo muy sutil al pasar el mouse */
 }
 
 
-.inicio{
- position: relative;
- background-image: url(../source/img/fondoAnimado2.gif);
- background-position: center center;
- background-size: cover;
- height: 90vh;
- min-height: 30rem;
- 
+/* 4. Sección Hero (Inicio) */
+.inicio {
+    position: relative;
+    background-image: url(../source/img/fondoAnimado2.gif);
+    background-position: center center;
+    background-size: cover;
+    height: 80vh; /* Un poco menos alto para ver contenido antes */
+    min-height: 30rem;
+    display: flex; /* Usamos flex para centrar */
+    align-items: center;
+    justify-content: center;
 }
 
 .inicio::before {
@@ -94,198 +130,191 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-
+    /* Degradado sobre el GIF para mejor lectura */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
-.inicio h1{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.inicio h1 {
+    position: relative; /* Ya no necesitamos transform/top/left porque el padre es flex */
+    margin: 0;
     color: white;
-    font-size: 36px;
+    font-size: 4rem; /* Texto más grande e impactante */
+    font-weight: 700;
     text-align: center;
-    margin-top: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* Sombra para mejorar lectura */
+    letter-spacing: -1px;
 }
 
-
-
+/* 5. Contenido Principal (Layout) */
 main {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 15px;
+    gap: 30px; /* Espacio entre la columna principal y el aside */
+    margin: 40px auto; /* Más margen vertical */
     max-width: 1200px;
-    
+    padding: 0 20px; /* Padding lateral para que no toque los bordes en pantallas medianas */
 }
 
 .main-article {
-    width: 80%; /* Ajusta el ancho según tus preferencias */
+    width: 70%; /* Ajuste ligero */
+    flex: 1; /* Toma el espacio disponible */
 }
 
 .secondary-article {
-    width: 40%; /* Ajusta el ancho según tus preferencias */
+    width: 30%; /* Ajuste ligero */
+    padding-left: 0; /* Eliminado padding antiguo */
 }
 
-/* Añade estilos adicionales según sea necesario para los artículos */
+/* 6. Diseño de Tarjetas (Articles) */
 article {
-    background-color: #f2f2f2;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    max-width: 800px;
+    background-color: var(--color-card-bg); /* Tu color original #f2f2f2 */
+    padding: 35px; /* Mucho más espacio interno (aire) */
+    margin-bottom: 30px;
+    border-radius: var(--border-radius-card);
+    /* Aquí está la clave de la profesionalidad: sombras suaves */
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(0,0,0,0.05); /* Borde casi invisible para definición */
 }
 
-article p{
-    font-size: 20px;
+/* Títulos dentro de los artículos */
+article h1 {
+    color: var(--color-header-bg);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--color-accent-hover); /* Pequeño detalle de diseño */
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
+article h3 {
+    color: #555;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+article p {
+    font-size: 1.1rem; /* Tamaño más estándar profesional (aprox 18px) */
+    color: #4a4a4a; /* Un gris oscuro, no negro puro, es más fácil de leer */
+    margin-bottom: 1.5rem;
+}
+
+/* Sección de Gatos y Botones */
 .gato-container {
     display: flex;
     justify-content: center;
+    gap: 30px; /* Espacio entre las tarjetas de gatos */
+    margin-top: 30px;
 }
 
 .gato {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos verticalmente */
-    margin: 10px; /* Ajusta el margen entre los div según tus preferencias */
+    align-items: center;
+    /* Convertimos cada gato en una mini-tarjeta */
+    background-color: #ffffff; /* Un poco más claro que el fondo del artículo */
+    padding: 20px;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
-.gato img{
-    height: 200px;
+.gato:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 }
 
-/* Estilo base del botón */
+.gato img {
+    height: 180px; /* Un poco más pequeños para balancear */
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* 7. Botones Profesionales */
 button {
-    background: linear-gradient(to bottom, #888888, #666666);
+    /* Usamos tu gris de base, pero plano, sin degradado antiguo */
+    background-color: #666666; 
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 28px; /* Más ancho y alto */
+    border-radius: 50px; /* Bordes completamente redondeados (estilo "pill") */
     cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
-    
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-button a{
+button a {
     text-decoration: none;
-    color: #ededed;
+    color: #ffffff; /* Asegura texto blanco */
+    display: block; /* Hace que todo el botón sea clickeable, no solo el texto */
 }
 
 /* Estilo hover del botón */
 button:hover {
-    background: linear-gradient(to bottom, #ff8800, #ff6600);
+    /* Tu naranja al pasar el mouse, pero sólido vibrante */
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px); /* Se mueve un poco hacia arriba */
+    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.3); /* Sombra naranja brillante */
 }
 
-/* Ajustar tamaño del texto del botón */
-button {
-    font-size: 16px;
-}
 
-.secondary-article img{
+/* Sidebar Imagen */
+.secondary-article img {
     width: 100%;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-subtle);
 }
 
-.secondary-article{
-    padding-left: 10px;
-}
 
-
+/* 8. Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-header-bg);
+    color: var(--color-text-muted);
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative; 
-    
-    width: 100%;
+    padding: 30px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
 }
 
 
-
-
-/* Estilos para hacer la página responsiva */
-@media only screen and (max-width: 600px) {
+/* 9. Responsividad (Móvil) */
+@media only screen and (max-width: 768px) {
     header {
-        padding: 5px;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 80px;
-        margin-bottom: 10px;
-    }
-
-    .logo_titulo {
-        margin-left: 10px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
+        gap: 15px;
+        padding: 15px;
     }
 
     nav ul {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        
+        gap: 10px;
     }
 
-    .gato-container {
-        display: block;
-    }
-
-    .gato {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-    }
-    
-    .gato img{
-        height: 220px;
-    }
-    
-    /* Estilo base del botón */
-    button {
-        background: linear-gradient(to bottom, #888888, #666666);
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
-    }
-    
-    /* Estilo hover del botón */
-    button:hover {
-        background: linear-gradient(to bottom, #ff8800, #ff6600);
-    }
-    
-    /* Ajustar tamaño del texto del botón */
-    button {
-        font-size: 16px;
+    .inicio h1 {
+        font-size: 2.5rem;
+        padding: 0 20px;
     }
 
     main {
-        flex-direction: column;
-        align-items: center;
-        max-width: 600px;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        margin-top: 20px;
+    }
+
+    .main-article, .secondary-article {
+        width: 100%; /* Ocupan todo el ancho */
     }
 
     article {
-        padding: 10px;
+        padding: 25px 20px; /* Menos padding en móvil */
     }
 
-    .secondary-article {
-        width: 85%; /* Ajusta el ancho según tus preferencias */
+    .gato-container {
+        flex-direction: column; /* Gatos uno debajo del otro */
+        gap: 20px;
+    }
+    
+    .gato {
+        width: 100%;
     }
 }

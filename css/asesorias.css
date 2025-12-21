@@ -1,264 +1,243 @@
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-image: url(../source/img/fondo2.jpg);
+/* asesorias.css - Versión Profesional Coherente */
+
+/* 1. Variables de Estilo (Paleta Original) */
+:root {
+    --color-header-bg: #585858;
+    --color-text-light: #ffffff;
+    --color-text-muted: #e5e5e5;
+    --color-text-dark: #333333;
+    --color-card-bg: #f2f2f2;
+    --color-accent-hover: #ff6600; /* Naranja de tus botones */
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius-card: 12px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../source/img/fondo2.jpg); /* Tu fondo específico para asesorías */
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* 2. Header y Navegación (Igual que Inicio para consistencia) */
 header {
-    background-color: #585858;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--color-header-bg);
+    color: var(--color-text-light);
+    padding: 1rem 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     display: flex; 
-    align-items: center; 
+    align-items: center;
+    gap: 15px;
 }
 
 .logo img {
-    width: 60px;
-    height: auto;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
+    border: 2px solid var(--color-accent-hover);
+    object-fit: cover;
 }
 
-.logo a{
+.logo_titulo h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.logo a {
     text-decoration: none;
-    color: #e5e5e5;
-}
-
-.logo a:hover{
-    color: #ffffff;
-}
-
-.logo_titulo {
-   margin-left: 15px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
+    color: var(--color-text-muted);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav li{
-    margin: 0 15px;
-    display: inline;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #000000;
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 15%;
+    color: var(--color-text-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #d7d7d7;
-    background-color: #909090;
+    color: var(--color-accent-hover);
+    background-color: rgba(255,255,255,0.1);
 }
 
+/* 3. Layout Principal */
 main {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 15px;
+    gap: 30px;
+    margin: 40px auto;
     max-width: 1200px;
-    
+    padding: 0 20px;
 }
 
 .main-article {
-    width: 80%; /* Ajusta el ancho según tus preferencias */
+    width: 70%;
+    flex: 1;
 }
 
 .secondary-article {
-    width: 40%; /* Ajusta el ancho según tus preferencias */
+    width: 30%;
 }
 
-/* Añade estilos adicionales según sea necesario para los artículos */
+/* 4. Tarjetas de Contenido (Articles) */
 article {
-    background-color: #f2f2f2;
-    padding: 15px;
-    margin-bottom: 20px;
+    background-color: var(--color-card-bg);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+article h1 {
+    color: var(--color-header-bg);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--color-accent-hover);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+article p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+/* 5. Contenedor de Video/Iframe (Clase .perro) */
+.perro {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
     border-radius: 8px;
-    max-width: 800px;
+    box-shadow: var(--shadow-subtle);
+    margin: 20px 0;
 }
 
-article p{
-    font-size: 20px;
-}
-
-/* Estilo base del botón */
-button {
-    background: linear-gradient(to bottom, #888888, #666666);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
-    
-}
-
-button a{
-    text-decoration: none;
-    color: #ededed;
-}
-
-/* Estilo hover del botón */
-button:hover {
-    background: linear-gradient(to bottom, #ff8800, #ff6600);
-}
-
-/* Ajustar tamaño del texto del botón */
-button {
-    font-size: 20px;
-}
-
-.secondary-article img{
+.perro iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border: none;
 }
 
-.secondary-article{
-    padding-left: 10px;
-}
-
+/* 6. Sección de Gatos / Imágenes */
 .gato-container {
     display: flex;
     justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .gato {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos verticalmente */
-    margin: 10px; /* Ajusta el margen entre los div según tus preferencias */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: var(--border-radius-card);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
-.gato img{
-    height: 200px;
+.gato img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
+/* 7. Botones Profesionales */
+button {
+    background-color: #666666;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
 
+button a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
 
+button:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.3);
+}
+
+/* Sidebar */
+.secondary-article img {
+    width: 100%;
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* 8. Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: relative; 
-    
+    padding: 40px 0;
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+/* 9. Responsividad */
+@media only screen and (max-width: 768px) {
     header {
-        padding: 5px;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 80px;
-        margin-bottom: 10px;
-    }
-
-    .logo_titulo {
-        margin-left: 10px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
+        padding: 15px;
     }
 
     nav ul {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        
-    }
-
-    .gato-container {
-        display: block;
-    }
-
-    .gato {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-    }
-    
-    .gato img{
-        height: 220px;
-    }
-    
-    /* Estilo base del botón */
-    button {
-        background: linear-gradient(to bottom, #888888, #666666);
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
-    }
-    
-    /* Estilo hover del botón */
-    button:hover {
-        background: linear-gradient(to bottom, #ff8800, #ff6600);
-    }
-    
-    /* Ajustar tamaño del texto del botón */
-    button {
-        font-size: 16px;
+        margin-top: 15px;
+        gap: 10px;
     }
 
     main {
         flex-direction: column;
-        align-items: center;
-        max-width: 600px;
     }
 
-    article {
-        padding: 10px;
-    }
-
-    .secondary-article {
-        width: 85%; /* Ajusta el ancho según tus preferencias */
-    }
-
-    .perro {
-        position: relative;
-        overflow: hidden;
-        padding-top: 56.25%; /* 16:9 aspect ratio for a responsive iframe */
-      }
-    
-      .perro iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .main-article, .secondary-article {
         width: 100%;
-        height: 100%;
-      }
+    }
+
+    .gato-container {
+        flex-direction: column;
+    }
 }
