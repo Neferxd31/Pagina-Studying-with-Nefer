@@ -1,320 +1,384 @@
-/* inicio.css - Versión Profesional Mejorada */
+/* =============================================
+   INICIO.CSS — Estilos específicos del home
+   ============================================= */
 
-/* 1. Definición de Variables para consistencia (Tu paleta original) */
-:root {
-    --color-header-bg: #585858;
-    --color-text-light: #ffffff;
-    --color-text-muted: #e5e5e5;
-    --color-text-dark: #333333;
-    --color-card-bg: #f2f2f2; /* El gris claro original de tus artículos */
-    --color-accent-hover: #ff6600; /* El naranja de tus botones */
-    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --border-radius-card: 12px;
+/* ====== HERO ====== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 100px 2rem 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
 }
 
-/* 2. Estilos Base Globales */
-* {
-    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+/* Fondo global del hero */
+.hero-bg-wrapper {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-body {
-    /* Usamos una pila de fuentes de sistema moderna y limpia */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(../source/img/fondo1.jpg);
-    background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll (efecto premium) */
-    background-size: cover;
-    color: var(--color-text-dark);
-    line-height: 1.6; /* Mejora la legibilidad del texto */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.7;
 }
 
-/* 3. Header y Navegación */
-header {
-    background-color: var(--color-header-bg);
-    color: var(--color-text-light);
-    padding: 1rem 5%; /* Más espacio lateral */
-    display: flex;
-    justify-content: space-between; /* Separa logo y nav a los extremos */
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Sombra suave bajo el header */
-    position: sticky; /* Opcional: deja el menú pegado arriba */
-    top: 0;
-    z-index: 100;
+.orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,107,0,0.22) 0%, transparent 70%);
+  top: -120px; right: -120px;
+  animation: orbFloat 10s ease-in-out infinite;
 }
 
-.logo {
-    display: flex; 
-    align-items: center;
-    gap: 15px; /* Espacio consistente entre imagen y texto */
+.orb-2 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(255,140,0,0.16) 0%, transparent 70%);
+  bottom: -60px; left: 5%;
+  animation: orbFloat 13s ease-in-out infinite 3s;
 }
 
-.logo img {
-    width: 55px; /* Ligeramente más pequeño y elegante */
-    height: 55px;
-    border-radius: 50%;
-    border: 2px solid var(--color-accent-hover); /* Un toque de color al logo */
-    object-fit: cover;
+.orb-3 {
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(255,179,71,0.12) 0%, transparent 70%);
+  top: 45%; left: 45%;
+  animation: orbFloat 9s ease-in-out infinite 6s;
 }
 
-.logo_titulo {
-   margin-left: 0; /* Eliminamos margen innecesario por el gap */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,107,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,107,0,0.05) 1px, transparent 1px);
+  background-size: 52px 52px;
 }
 
-.logo_titulo h2 {
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+/* ====== HERO CONTENT ====== */
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+  position: relative;
+  z-index: 1;
 }
 
-.logo a {
-    text-decoration: none;
-    color: var(--color-text-muted);
-    transition: color 0.3s ease;
+.hero-content h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1.05;
+  margin: 16px 0 22px;
+  color: var(--white);
 }
 
-.logo a:hover {
-    color: var(--color-text-light);
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--gray);
+  margin-bottom: 36px;
+  max-width: 460px;
+  line-height: 1.7;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px; /* Espacio entre enlaces */
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-nav li {
-    margin: 0; /* Eliminamos márgenes antiguos */
-    display: inline;
+/* Stats bar */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 52px;
+  padding-top: 32px;
+  border-top: 1px solid var(--dark-border);
 }
 
-/* Estilo de enlaces de navegación más limpio */
-nav a {
-    text-decoration: none;
-    color: var(--color-text-light); /* Texto blanco limpio */
-    background-color: transparent; /* Eliminamos el fondo blanco antiguo */
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
+.stat { display: flex; flex-direction: column; }
+
+.stat-num {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--orange);
+  line-height: 1;
 }
 
-/* Efecto hover profesional: línea inferior sutil o cambio de fondo suave */
-nav a:hover {
-    color: var(--color-accent-hover);
-    background-color: rgba(255,255,255,0.1); /* Fondo muy sutil al pasar el mouse */
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-top: 4px;
 }
 
-
-/* 4. Sección Hero (Inicio) */
-.inicio {
-    position: relative;
-    background-image: url(../source/img/fondoAnimado2.gif);
-    background-position: center center;
-    background-size: cover;
-    height: 80vh; /* Un poco menos alto para ver contenido antes */
-    min-height: 30rem;
-    display: flex; /* Usamos flex para centrar */
-    align-items: center;
-    justify-content: center;
+.stat-sep {
+  width: 1px;
+  height: 40px;
+  background: var(--dark-border);
 }
 
-.inicio::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Degradado sobre el GIF para mejor lectura */
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+/* ====== HERO ILLUSTRATION ====== */
+.hero-visual {
+  flex: 0 0 340px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.inicio h1 {
-    position: relative; /* Ya no necesitamos transform/top/left porque el padre es flex */
-    margin: 0;
-    color: white;
-    font-size: 4rem; /* Texto más grande e impactante */
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* Sombra para mejorar lectura */
-    letter-spacing: -1px;
+.hero-ring {
+  position: relative;
+  width: 280px;
+  height: 280px;
 }
 
-/* 5. Contenido Principal (Layout) */
-main {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Espacio entre la columna principal y el aside */
-    margin: 40px auto; /* Más margen vertical */
-    max-width: 1200px;
-    padding: 0 20px; /* Padding lateral para que no toque los bordes en pantallas medianas */
+/* Anillo giratorio decorativo */
+.hero-ring::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 107, 0, 0.25);
+  animation: spinSlow 20s linear infinite;
 }
 
-.main-article {
-    width: 70%; /* Ajuste ligero */
-    flex: 1; /* Toma el espacio disponible */
+.hero-ring::after {
+  content: '';
+  position: absolute;
+  inset: -32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 0, 0.1);
+  animation: spinSlow 30s linear infinite reverse;
 }
 
-.secondary-article {
-    width: 30%; /* Ajuste ligero */
-    padding-left: 0; /* Eliminado padding antiguo */
+.hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+  box-shadow:
+    0 0 0 8px rgba(255,107,0,0.08),
+    0 0 60px rgba(255,107,0,0.3),
+    var(--shadow);
+  animation: float 6s ease-in-out infinite;
 }
 
-/* 6. Diseño de Tarjetas (Articles) */
-article {
-    background-color: var(--color-card-bg); /* Tu color original #f2f2f2 */
-    padding: 35px; /* Mucho más espacio interno (aire) */
-    margin-bottom: 30px;
-    border-radius: var(--border-radius-card);
-    /* Aquí está la clave de la profesionalidad: sombras suaves */
-    box-shadow: var(--shadow-subtle);
-    border: 1px solid rgba(0,0,0,0.05); /* Borde casi invisible para definición */
+/* Badges flotantes */
+.float-badge {
+  position: absolute;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 50px;
+  padding: 9px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+  z-index: 2;
 }
 
-/* Títulos dentro de los artículos */
-article h1 {
-    color: var(--color-header-bg);
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--color-accent-hover); /* Pequeño detalle de diseño */
-    display: inline-block;
-    padding-bottom: 5px;
+.float-badge i { color: var(--orange); font-size: 0.9rem; }
+
+.fb-math   { top: -10px;  left: -70px;  animation: floatSlow 4s ease-in-out infinite; }
+.fb-lang   { bottom: 60px; right: -80px; animation: floatSlow 5s ease-in-out infinite 1s; }
+.fb-code   { bottom: -20px; left: -50px; animation: floatSlow 4.5s ease-in-out infinite 2s; }
+
+/* ====== ABOUT SECTION ====== */
+.about-section {
+  background: var(--dark-2);
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
 }
 
-article h3 {
-    color: #555;
-    margin-top: 2rem;
-    text-align: center;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-article p {
-    font-size: 1.1rem; /* Tamaño más estándar profesional (aprox 18px) */
-    color: #4a4a4a; /* Un gris oscuro, no negro puro, es más fácil de leer */
-    margin-bottom: 1.5rem;
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
 }
 
-/* Sección de Gatos y Botones */
-.gato-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Espacio entre las tarjetas de gatos */
-    margin-top: 30px;
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,107,0,0.1);
+  border: 1px solid rgba(255,107,0,0.22);
+  color: var(--orange-lighter);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
-.gato {
-    display: flex;
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  transition: var(--transition);
+}
+
+.feature-item:hover { border-color: rgba(255,107,0,0.3); }
+
+.feat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,107,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.feature-item:hover .feat-icon { background: rgba(255,107,0,0.2); }
+
+.feature-item h4 {
+  font-size: 0.92rem;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+
+.feature-item p {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* ====== SUBJECTS SECTION ====== */
+.subjects-section { background: var(--dark); }
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.subject-card h3 {
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.subject-card p {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* ====== PRICING CTA ====== */
+.pricing-cta {
+  background: var(--dark-2);
+  border-top: 1px solid var(--dark-border);
+}
+
+.pricing-card {
+  position: relative;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,107,0,0.3);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  text-align: center;
+  overflow: hidden;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,107,0,0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.pricing-card > * { position: relative; z-index: 1; }
+
+.pricing-card h2 {
+  font-size: 1.6rem;
+  color: var(--white);
+  margin: 10px 0 28px;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.p-currency { font-size: 1.5rem; color: var(--orange); font-weight: 700; }
+.p-amount {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--orange), var(--orange-lighter));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.p-period { font-size: 1rem; color: var(--gray); }
+
+.pricing-card .desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 32px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .hero {
     flex-direction: column;
-    align-items: center;
-    /* Convertimos cada gato en una mini-tarjeta */
-    background-color: #ffffff; /* Un poco más claro que el fondo del artículo */
-    padding: 20px;
-    border-radius: var(--border-radius-card);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.gato:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-}
-
-.gato img {
-    height: 180px; /* Un poco más pequeños para balancear */
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-/* 7. Botones Profesionales */
-button {
-    /* Usamos tu gris de base, pero plano, sin degradado antiguo */
-    background-color: #666666; 
-    color: #ffffff;
-    border: none;
-    padding: 12px 28px; /* Más ancho y alto */
-    border-radius: 50px; /* Bordes completamente redondeados (estilo "pill") */
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-button a {
-    text-decoration: none;
-    color: #ffffff; /* Asegura texto blanco */
-    display: block; /* Hace que todo el botón sea clickeable, no solo el texto */
-}
-
-/* Estilo hover del botón */
-button:hover {
-    /* Tu naranja al pasar el mouse, pero sólido vibrante */
-    background-color: var(--color-accent-hover);
-    transform: translateY(-2px); /* Se mueve un poco hacia arriba */
-    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.3); /* Sombra naranja brillante */
-}
-
-
-/* Sidebar Imagen */
-.secondary-article img {
-    width: 100%;
-    border-radius: var(--border-radius-card);
-    box-shadow: var(--shadow-subtle);
-}
-
-
-/* 8. Footer */
-footer {
-    background-color: var(--color-header-bg);
-    color: var(--color-text-muted);
     text-align: center;
-    padding: 30px 0;
-    margin-top: 60px;
-    font-size: 0.9rem;
+    padding: 80px 1.5rem 60px;
+    min-height: auto;
+    gap: 40px;
+  }
+  .hero-content { max-width: 100%; }
+  .hero-sub { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .pricing-card { padding: 40px 24px; }
 }
 
-
-/* 9. Responsividad (Móvil) */
-@media only screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    .inicio h1 {
-        font-size: 2.5rem;
-        padding: 0 20px;
-    }
-
-    main {
-        flex-direction: column; /* Apila los elementos verticalmente */
-        margin-top: 20px;
-    }
-
-    .main-article, .secondary-article {
-        width: 100%; /* Ocupan todo el ancho */
-    }
-
-    article {
-        padding: 25px 20px; /* Menos padding en móvil */
-    }
-
-    .gato-container {
-        flex-direction: column; /* Gatos uno debajo del otro */
-        gap: 20px;
-    }
-    
-    .gato {
-        width: 100%;
-    }
+@media (max-width: 480px) {
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .stat-sep { display: none; }
+  .p-amount { font-size: 3.2rem; }
 }

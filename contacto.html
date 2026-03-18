@@ -1,66 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="icon" href="source/img/logo1.jpeg" type="image/x-icon">
-    <title>Contacto - Studying with Nefer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Studying with Nefer</title>
+  <link rel="icon" href="source/img/logo1.jpeg" type="image/jpeg">
+  <meta name="description" content="Contáctame por WhatsApp, correo o LinkedIn para agendar tu asesoría académica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-          <a href="index.html">
-            <img src="source/img/logo1.jpeg" alt="Logo Nefer" />
-          </a>
-          <div class="logo_titulo">
-            <a href="index.html">
-              <h2>Studying with Nefer</h2>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="source/img/logo1.jpeg" alt="SWN">
+        <span class="logo-text">Studying with Nefer</span>
+      </a>
+      <nav>
+        <a href="index.html"      class="nav-link">Inicio</a>
+        <a href="asesorias.html"  class="nav-link">Asesorías</a>
+        <a href="contacto.html"   class="nav-link active">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== PAGE HERO ====== -->
+    <div class="page-hero">
+      <div class="page-hero-grid" aria-hidden="true"></div>
+      <div class="badge reveal">
+        <i class="fa-solid fa-comments"></i>
+        Hablemos
+      </div>
+      <h1 class="reveal reveal-delay-1">Ponte en contacto</h1>
+      <p class="reveal reveal-delay-2">Elige el canal que prefieras y te respondo lo antes posible</p>
+    </div>
+
+    <!-- ====== MÉTODOS DE CONTACTO ====== -->
+    <section class="contact-section">
+      <div class="section-inner">
+
+        <div class="contact-grid">
+
+          <!-- WhatsApp -->
+          <div class="contact-card wa reveal reveal-delay-1">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p class="contact-desc">
+              La forma más rápida de comunicarte. Te respondo en el menor tiempo posible para coordinar tu asesoría.
+            </p>
+            <p class="contact-value">+57 314 854 8544</p>
+            <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+               class="contact-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              Enviar mensaje
             </a>
           </div>
-        </div>
-        
-        <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="asesorias.html">Asesorias</a></li>
-            <li><a href="contacto.html" class="active">Contacto</a></li>
-          </ul>
-        </nav>
-    </header>
 
-    <main>
-        <article class="contact-card">
-            <h1>Ponte en contacto</h1>
-            <p>¿Tienes dudas sobre las asesorías? Estoy aquí para ayudarte a resolver tus trabajos escolares con el mejor enfoque personalizado.</p>
-            
-            <div class="contact-methods">
-                <div class="method-item">
-                    <div class="icon">✉️</div>
-                    <h3>Correo Electrónico</h3>
-                    <p>nefersneyder31@gmail.com</p>
-                    <button><a href="mailto:nefersneyder31@gmail.com">Enviar Correo</a></button>
-                </div>
-
-                <div class="method-item">
-                    <div class="icon">💬</div>
-                    <h3>WhatsApp</h3>
-                    <p>+57 314 854 8544</p>
-                    <button class="btn-whatsapp"><a href="https://wa.me/573148548544" target="_blank">Escríbeme</a></button>
-                </div>
-
-                <div class="method-item">
-                    <div class="icon">🔗</div>
-                    <h3>LinkedIn Professional</h3>
-                    <p>Conecta conmigo en mi red</p>
-                    <button><a href="https://www.linkedin.com/in/nefer-sneyder-rojas-a7ba17280/" target="_blank">Ver Perfil</a></button>
-                </div>
+          <!-- Correo -->
+          <div class="contact-card mail reveal reveal-delay-2">
+            <div class="contact-icon-wrap">
+              <i class="fa-solid fa-envelope"></i>
             </div>
-        </article>
-    </main>
+            <h3>Correo electrónico</h3>
+            <p class="contact-desc">
+              Para consultas más detalladas o formales. Intento responder en menos de 24 horas.
+            </p>
+            <p class="contact-value">nefersneyder31@gmail.com</p>
+            <a href="https://mail.google.com/mail/?view=cm&to=nefersneyder31@gmail.com&su=Consulta+sobre+asesor%C3%ADas+%E2%80%94+Studying+with+Nefer&body=Hola+Nefer%2C%0A%0AMe+interesa+obtener+m%C3%A1s+informaci%C3%B3n+sobre+tus+asesor%C3%ADas+acad%C3%A9micas.%0A%0AQuedo+atento%2Fa+a+tu+respuesta.%0A%0ASaludos%2C%0A%5BTu+nombre%5D"
+               class="contact-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-paper-plane"></i>
+              Enviar correo
+            </a>
+          </div>
 
-    <footer>
-        <p>&copy; 2025 Studying with Nefer. Todos los derechos reservados.</p>
-    </footer>
+          <!-- LinkedIn -->
+          <div class="contact-card li reveal reveal-delay-3">
+            <div class="contact-icon-wrap">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p class="contact-desc">
+              Conéctate conmigo en LinkedIn para conocer más sobre mi perfil académico y profesional.
+            </p>
+            <p class="contact-value">Nefer Sneyder Rojas</p>
+            <a href="https://www.linkedin.com/in/nefer-sneyder-rojas-a7ba17280/"
+               class="contact-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin-in"></i>
+              Ver perfil
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== INFO ADICIONAL ====== -->
+    <section class="info-section">
+      <div class="section-inner">
+        <div class="section-header center reveal" style="margin-bottom:36px;">
+          <h2 class="section-title">Información <span>útil</span></h2>
+          <div class="divider" style="margin:14px auto 0;"></div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item reveal reveal-delay-1">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <h4>Tiempo de respuesta</h4>
+              <p>Por WhatsApp respondo en pocas horas. Por correo, máximo 24 h.</p>
+            </div>
+          </div>
+          <div class="info-item reveal reveal-delay-2">
+            <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div>
+              <h4>Agendamiento</h4>
+              <p>Las sesiones se coordinan directamente por WhatsApp según disponibilidad.</p>
+            </div>
+          </div>
+          <div class="info-item reveal reveal-delay-3">
+            <div class="info-icon"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+            <div>
+              <h4>Tarifa</h4>
+              <p>$20.000 COP por hora de asesoría personalizada.</p>
+            </div>
+          </div>
+          <div class="info-item reveal reveal-delay-4">
+            <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div>
+              <h4>Niveles</h4>
+              <p>Atendemos preescolar, primaria y secundaria en todas las materias.</p>
+            </div>
+          </div>
+          <div class="info-item reveal reveal-delay-5">
+            <div class="info-icon"><i class="fa-solid fa-laptop"></i></div>
+            <div>
+              <h4>Modalidad virtual</h4>
+              <p>Clases online disponibles para estudiantes de todo el país.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-body">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-link">
+          <img src="source/img/logo1.jpeg" alt="SWN">
+          <span class="logo-text">Studying with Nefer</span>
+        </a>
+        <p>Asesorías académicas personalizadas para preescolar, primaria y secundaria. Modalidad virtual a nivel nacional.</p>
+        <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+           class="footer-wa" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Escríbeme
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="asesorias.html"><i class="fa-solid fa-chevron-right"></i> Asesorías</a></li>
+          <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="tratamiento-datos.html"><i class="fa-solid fa-chevron-right"></i> Tratamiento de datos</a></li>
+          <li><a href="politica-privacidad.html"><i class="fa-solid fa-chevron-right"></i> Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>Studying with Nefer</span>. Todos los derechos reservados.</p>
+      <div class="footer-legal-links">
+        <a href="tratamiento-datos.html">Tratamiento de datos</a>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
+    }, { threshold: 0.1 })
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+
+    setTimeout(() => {
+      document.querySelectorAll('.page-hero .reveal').forEach(el => el.classList.add('visible'))
+    }, 80)
+  </script>
 </body>
 </html>

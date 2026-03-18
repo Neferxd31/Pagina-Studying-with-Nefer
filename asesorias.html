@@ -1,94 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/asesorias.css" />
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=inicializarMapa"></script>
-  <script src="js/funcionalidad.js"></script>
-  <link rel="icon" href="source/img/logo1.jpeg" type="image/x-icon">
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asesorías — Studying with Nefer</title>
+  <link rel="icon" href="source/img/logo1.jpeg" type="image/jpeg">
+  <meta name="description" content="Servicios de asesoría académica personalizados. Matemáticas, Lenguaje, Ciencias, Inglés y más. $20.000 por hora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/asesorias.css">
+</head>
+<body>
 
-    <title>Asesorias</title>
-  </head>
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="source/img/logo1.jpeg" alt="SWN">
+        <span class="logo-text">Studying with Nefer</span>
+      </a>
+      <nav>
+        <a href="index.html"      class="nav-link">Inicio</a>
+        <a href="asesorias.html"  class="nav-link active">Asesorías</a>
+        <a href="contacto.html"   class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img src="source/img/logo1.jpeg" alt="Studying with Nefer Logo" />
-        </a>
-        <div class="logo_titulo">
-          <a href="index.html">
-            <h2>Studying with Nefer</h2>
-          </a>
+  <main>
+
+    <!-- ====== PAGE HERO ====== -->
+    <div class="page-hero">
+      <div class="page-hero-grid" aria-hidden="true"></div>
+      <div class="badge reveal">
+        <i class="fa-solid fa-book-open-reader"></i>
+        Servicios académicos
+      </div>
+      <h1 class="reveal reveal-delay-1">Asesorías académicas</h1>
+      <p class="reveal reveal-delay-2">Todo lo que necesitas saber sobre los servicios y materias disponibles</p>
+    </div>
+
+    <!-- ====== MATERIAS ====== -->
+    <section class="services-section">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <div class="badge"><i class="fa-solid fa-chalkboard"></i> Materias</div>
+          <h2 class="section-title">¿Qué <span>materias</span> cubrimos?</h2>
+          <div class="divider"></div>
+          <p class="section-sub">Asesoría completa para las principales áreas del currículo escolar colombiano</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal reveal-delay-1">
+            <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+            <h3>Matemáticas</h3>
+            <p>Aritmética básica, álgebra, geometría, trigonometría y fundamentos de cálculo.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="card-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+            <h3>Lenguaje y Literatura</h3>
+            <p>Comprensión lectora, redacción, gramática, ortografía y análisis literario.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+            <h3>Ciencias Naturales</h3>
+            <p>Biología, química, física y ciencias del medio ambiente.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <h3>Ciencias Sociales</h3>
+            <p>Historia de Colombia y el mundo, geografía, ciudadanía y constitución.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
+            <h3>Inglés</h3>
+            <p>Gramática, vocabulario, comprensión de lectura y conversación básica.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Programación</h3>
+            <p>Lógica de programación, algoritmos y fundamentos computacionales.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-1">
+            <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+            <h3>Física</h3>
+            <p>Movimiento, fuerza, energía, trabajo, ondas y electricidad básica.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2">
+            <div class="card-icon"><i class="fa-solid fa-vial"></i></div>
+            <h3>Química</h3>
+            <p>Tabla periódica, enlaces químicos, mezclas, reacciones y soluciones.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+            <h3>Estadística</h3>
+            <p>Media, moda, mediana, gráficas y probabilidad básica.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <nav>
-        <ul>
-           <li><a href="index.html">Inicio</a></li>
-            <li><a href="asesorias.html">Asesorias</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <article class="main-article">
-        <h2>Asesorías y Precios</h2>
-
-        <p>
-          Bienvenido a Studying with Nefer, donde ofrecemos asesorías en
-          diversas materias para apoyarte en tu aprendizaje.
-        </p>
-
-        <h3>Ubicación</h3>
-        <p>
-          Estamos ubicados en la calle 35 #2-29, Barrio 12 de Octubre. ¡Te
-          esperamos en nuestro espacio presencial!
-        </p>
-        <div class="perro">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d988.1263214089205!2d-72.50123773053275!3d7.842064328074396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNTAnMzEuNCJOIDcywrAzMCcwMi4xIlc!5e0!3m2!1ses!2sco!4v1706820724237!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- ====== NIVELES ====== -->
+    <section class="levels-section">
+      <div class="section-inner">
+        <div class="section-header center reveal">
+          <div class="badge"><i class="fa-solid fa-layer-group"></i> Niveles</div>
+          <h2 class="section-title">¿Para quién <span>es esto?</span></h2>
+          <div class="divider" style="margin:14px auto 0;"></div>
         </div>
-        <p>- Costo presencial: 15,000 pesos.</p>
 
-        <h3>Servicio a Domicilio</h3>
-        <p>
-          ¿Prefieres recibir asesorías en la comodidad de tu hogar? Ofrecemos
-          servicio a domicilio.
-        </p>
-        <p>- Costo a domicilio: 18,000 pesos.</p>
+        <div class="levels-grid" style="margin-top:40px;">
+          <div class="level-card reveal reveal-delay-1">
+            <div class="level-icon"><i class="fa-solid fa-star"></i></div>
+            <h3>Preescolar</h3>
+            <p>Fundamentos del aprendizaje con actividades lúdicas y pedagógicas</p>
+          </div>
+          <div class="level-card reveal reveal-delay-2">
+            <div class="level-icon"><i class="fa-solid fa-book"></i></div>
+            <h3>Primaria</h3>
+            <p>Refuerzo en todas las áreas del currículo de 1° a 5° grado</p>
+          </div>
+          <div class="level-card reveal reveal-delay-3">
+            <div class="level-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Secundaria</h3>
+            <p>Preparación académica completa de 6° a 11° grado</p>
+          </div>
+          <div class="level-card reveal reveal-delay-4">
+            <div class="level-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Virtual · Nacional</h3>
+            <p>Asesorías online para estudiantes de cualquier ciudad de Colombia</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        
+    <!-- ====== PRECIO ====== -->
+    <section class="pricing-section">
+      <div class="section-inner">
+        <div class="section-header center reveal">
+          <div class="badge"><i class="fa-solid fa-tag"></i> Precios</div>
+          <h2 class="section-title">Tarifa <span>clara y justa</span></h2>
+          <div class="divider" style="margin:14px auto 0;"></div>
+        </div>
 
-        <p>
-          En Studying with Nefer, nos comprometemos a brindarte el apoyo que
-          necesitas en estas materias para alcanzar tus metas académicas.
-        </p>
-
-        <p>
-          ¡Contáctanos para programar tus asesorías y comenzar tu viaje hacia el
-          éxito!
-        </p>
-        <div class="gato-container">
-            <div class="gato">
-                <img src="source/img/niña2.gif" alt="">
-                <button><a href="https://forms.gle/XaP15EMqQSpRd6hD7" target="_blank">Aparta asesoria</a></button>
+        <div class="pricing-wrapper" style="margin-top:40px;">
+          <div class="main-price-card reveal">
+            <div class="badge">
+              <i class="fa-solid fa-circle-check"></i>
+              Tarifa única
             </div>
+            <h2>Asesoría personalizada</h2>
+
+            <div class="big-price">
+              <span class="bp-sign">$</span>
+              <span class="bp-value">20.000</span>
+              <span class="bp-unit">/ hora</span>
+            </div>
+            <p class="price-note">Pesos colombianos (COP) · Sin costos ocultos</p>
+
+            <div class="price-includes">
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Sesión 100% personalizada a tu tema y nivel
+              </div>
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Explicaciones claras y a tu ritmo
+              </div>
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Resolución de talleres, guías y tareas
+              </div>
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Atención por WhatsApp para dudas puntuales
+              </div>
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Horarios flexibles y acordados con anticipación
+              </div>
+              <div class="include-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Modalidad virtual — disponible en todo el país
+              </div>
+            </div>
+
+            <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              Agendar ahora
+            </a>
+          </div>
         </div>
-        
-      </article>
+      </div>
+    </section>
 
-      <aside class="secondary-article">
-        <article>
-          <!-- Coloca el contenido adicional, por ejemplo, imágenes de información -->
-          <img src="source/img/infoMaterias.jpeg" alt="Información Adicional" />
-        </article>
-      </aside>
-    </main>
+    <!-- ====== CTA ====== -->
+    <section class="cta-section">
+      <div class="section-inner">
+        <div class="cta-box reveal">
+          <div class="badge"><i class="fa-solid fa-rocket"></i> ¿Listo para empezar?</div>
+          <h2>¿Tienes alguna pregunta?</h2>
+          <p>Escríbeme directamente y con gusto te explico cómo funcionan las asesorías y coordinamos tu primera sesión.</p>
+          <div class="cta-actions">
+            <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              Escribir por WhatsApp
+            </a>
+            <a href="contacto.html" class="btn btn-secondary">
+              <i class="fa-solid fa-address-card"></i>
+              Ver contacto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2025 Studying with Nefer. Todos los derechos reservados.</p>
-    </footer>
-  </body>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-body">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-link">
+          <img src="source/img/logo1.jpeg" alt="SWN">
+          <span class="logo-text">Studying with Nefer</span>
+        </a>
+        <p>Asesorías académicas personalizadas para preescolar, primaria y secundaria. Modalidad virtual a nivel nacional.</p>
+        <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+           class="footer-wa" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Escríbeme
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="asesorias.html"><i class="fa-solid fa-chevron-right"></i> Asesorías</a></li>
+          <li><a href="contacto.html"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="tratamiento-datos.html"><i class="fa-solid fa-chevron-right"></i> Tratamiento de datos</a></li>
+          <li><a href="politica-privacidad.html"><i class="fa-solid fa-chevron-right"></i> Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span>Studying with Nefer</span>. Todos los derechos reservados.</p>
+      <div class="footer-legal-links">
+        <a href="tratamiento-datos.html">Tratamiento de datos</a>
+        <a href="politica-privacidad.html">Política de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
+    }, { threshold: 0.1 })
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+
+    setTimeout(() => {
+      document.querySelectorAll('.page-hero .reveal').forEach(el => el.classList.add('visible'))
+    }, 80)
+  </script>
+</body>
 </html>
