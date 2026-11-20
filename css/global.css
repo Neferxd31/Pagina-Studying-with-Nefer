@@ -604,7 +604,8 @@ section { padding: 80px 2rem; }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  header { padding: 0 1rem; }
+  /* En celular el menú se queda arriba en vez de seguir al usuario */
+  header { padding: 0 1rem; position: static; }
 
   .header-inner {
     flex-direction: column;
