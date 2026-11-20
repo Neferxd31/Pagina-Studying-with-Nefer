@@ -2,8 +2,6 @@
    INICIO.CSS — Página principal
    ============================================= */
 
-.center-text { text-align: center; }
-
 /* ====== HERO ====== */
 .hero {
   padding-top: 64px;
@@ -128,42 +126,6 @@
 .hero-price span { display: block; font-size: 0.75rem; font-weight: 600; color: #555; }
 .hero-price strong { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--orange-dark); }
 
-/* ====== DOLORES ====== */
-.pains { padding-top: 40px; }
-
-.pains-grid {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 32px 0 28px;
-}
-
-.pains-grid li {
-  background: var(--dark-card);
-  border: 1px solid var(--dark-border);
-  border-radius: var(--radius);
-  padding: 20px;
-  color: var(--gray-light);
-  font-size: 0.95rem;
-}
-
-.pains-grid li span {
-  display: block;
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-}
-
-.pains-answer {
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--gray-light);
-  max-width: 560px;
-  margin: 0 auto;
-}
-
-.pains-answer strong { color: var(--orange); }
-
 /* ====== SERVICIOS ====== */
 .services-grid {
   display: grid;
@@ -172,6 +134,7 @@
 }
 
 .service {
+  position: relative;
   padding: 32px 28px;
   transition: transform 0.3s ease;
 }
@@ -180,7 +143,17 @@
 .service:nth-child(2) { transform: rotate(1deg); }
 .service:hover { transform: rotate(0) translateY(-4px); }
 
-.service-emoji { font-size: 2.2rem; margin-bottom: 10px; }
+.service-art { display: flex; gap: 6px; margin-bottom: 12px; }
+
+/* Mascot peeking over the card corner */
+.service-mascot {
+  position: absolute;
+  top: -46px;
+  right: -14px;
+  width: 110px;
+  transform: rotate(8deg);
+}
+.service-art img { width: 64px; height: 64px; }
 .service h3 { font-size: 1.8rem; margin-bottom: 10px; }
 .service-levels { margin: 14px 0 20px; font-weight: 600; color: var(--cream-ink) !important; }
 
@@ -230,7 +203,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.subject-pill span { font-size: 1.5rem; }
+.subject-pill img { width: 40px; height: 40px; flex-shrink: 0; }
 
 .subject-pill::after {
   content: '\f232';
@@ -256,6 +229,12 @@
 }
 
 /* ====== MODALIDADES ====== */
+.section-mascot {
+  width: 110px;
+  margin: 0 auto 8px;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
 .modes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -340,6 +319,7 @@
 }
 
 .booking-form {
+  position: relative;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -369,12 +349,30 @@
 .booking-form select:focus-visible { border-color: var(--orange); outline: none; }
 .booking-form .btn { margin-top: 6px; }
 
+.booking-mascot {
+  position: absolute;
+  top: -64px;
+  right: -18px;
+  width: 110px;
+  transform: rotate(6deg);
+}
+
 /* ====== SOBRE MÍ ====== */
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   gap: 56px;
   align-items: center;
+}
+
+.about-media { position: relative; }
+
+.about-mascot {
+  position: absolute;
+  width: 140px;
+  right: -24px;
+  bottom: -36px;
+  animation: float 4s ease-in-out infinite;
 }
 
 .about-photo {
@@ -392,29 +390,6 @@
 }
 
 .about-grid .btn { margin-top: 10px; }
-
-/* ====== IDEAS ====== */
-.ideas { background: var(--dark-2); }
-
-.ideas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.idea-card {
-  border: 2px dashed var(--dark-border);
-  border-radius: var(--radius);
-  padding: 26px;
-  transition: var(--transition);
-}
-
-.idea-card:hover { border-color: var(--orange); }
-.idea-card i { font-size: 1.5rem; color: var(--yellow); margin-bottom: 14px; }
-.idea-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
-.idea-card p { font-size: 0.9rem; margin-bottom: 14px; }
-.idea-card a { color: var(--orange-lighter); font-weight: 600; font-size: 0.88rem; }
-.idea-card a:hover { text-decoration: underline; }
 
 /* ====== FAQ ====== */
 .faq-inner { max-width: 720px; }
@@ -451,6 +426,7 @@
 
 /* ====== CTA FINAL ====== */
 .final-cta-box {
+  position: relative;
   text-align: center;
   padding: 48px 28px;
   max-width: 720px;
@@ -458,6 +434,14 @@
 
 .final-cta-box h2 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-bottom: 8px; }
 .final-cta-box p { margin-bottom: 24px; }
+
+.cta-mascot {
+  position: absolute;
+  width: 130px;
+}
+
+.cta-mascot-left { left: -60px; bottom: -30px; transform: rotate(-8deg); }
+.cta-mascot-right { right: -60px; top: -50px; transform: rotate(8deg); }
 
 /* ====== SCROLL REVEAL ====== */
 .scroll-reveal { transition: opacity .65s ease, transform .65s ease; }
@@ -476,6 +460,10 @@
   .hero { padding-top: 40px; }
   .hero-visual { padding: 10px 10px 30px 30px; }
   .subjects-mascot { display: none; }
+  .cta-mascot { width: 90px; }
+  .cta-mascot-left { left: -14px; bottom: -40px; }
+  .cta-mascot-right { right: -14px; top: -56px; }
+  .final-cta-box { margin-top: 30px; margin-bottom: 30px; }
   .about-photo { max-width: 360px; }
 }
 
@@ -483,6 +471,9 @@
   .hero-accent { white-space: normal; }
   .hero-actions .btn { width: 100%; }
   .hero-price { right: 0; }
+  .service-mascot { width: 84px; top: -40px; right: -6px; }
+  .booking-mascot { width: 84px; top: -50px; right: -6px; }
+  .about-mascot { width: 110px; right: -8px; }
   .subject-pill { font-size: 1.1rem; }
 }
 

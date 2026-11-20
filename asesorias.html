@@ -33,18 +33,39 @@
   <main id="contenido">
 
     <!-- ====== PAGE HERO ====== -->
-    <div class="page-hero">
+    <div class="page-hero services-hero">
       <div class="page-hero-grid" aria-hidden="true"></div>
-      <div class="badge">
-        <i class="fa-solid fa-book-open-reader"></i>
-        Servicios académicos
+      <div class="services-hero-grid">
+        <div class="services-hero-copy">
+          <div class="badge">
+            <i class="fa-solid fa-book-open-reader"></i>
+            Servicios académicos
+          </div>
+          <h1>Asesorías en tareas e inglés académico</h1>
+          <p>Refuerzo cercano y con paciencia para que cada estudiante entienda sus temas de clase.</p>
+          <ul class="services-hero-facts">
+            <li><i class="fa-solid fa-children"></i> Jardín a secundaria</li>
+            <li><i class="fa-solid fa-language"></i> Inglés de 1° a 11°</li>
+            <li><i class="fa-solid fa-location-dot"></i> Presencial, domicilio o virtual</li>
+            <li><i class="fa-solid fa-tag"></i> $20.000 la hora</li>
+          </ul>
+          <div class="services-hero-actions">
+            <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20agendar%20una%20asesor%C3%ADa%20de%20Nefer%20Lab." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+            </a>
+            <a href="#materias" class="btn btn-secondary">Ver materias <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="services-hero-art" aria-hidden="true">
+          <img class="art-poster art-poster-back" src="source/new_img/web/afiche-materias.webp" alt="" width="720" height="1279">
+          <img class="art-poster art-poster-front" src="source/new_img/web/afiche-tareas-ingles.webp" alt="" width="720" height="1279">
+          <img class="art-mascot" src="source/new_img/web/cerebro.webp" alt="" width="520" height="440">
+        </div>
       </div>
-      <h1>Asesorías en tareas e inglés académico</h1>
-      <p>Jardín, preescolar, primaria y secundaria · Presencial, a domicilio y virtual</p>
     </div>
 
     <!-- ====== MATERIAS ====== -->
-    <section class="services-section">
+    <section class="services-section" id="materias">
       <div class="section-inner">
         <div class="section-header">
           <div class="badge"><i class="fa-solid fa-chalkboard"></i> Materias</div>
@@ -214,14 +235,45 @@
         </ul>
 
         <div class="posters-grid">
-          <a href="source/new_img/web/afiche-tareas-ingles.webp" target="_blank" rel="noopener">
+          <a href="source/new_img/web/afiche-tareas-ingles.webp" class="poster-link" aria-label="Ver afiche de tareas e inglés en grande">
             <img src="source/new_img/web/afiche-tareas-ingles.webp" alt="Afiche de Nefer Lab: asesorías en tareas para jardín, preescolar, primaria y secundaria, e inglés académico de 1° a 11°" width="720" height="1279" loading="lazy">
           </a>
-          <a href="source/new_img/web/afiche-materias.webp" target="_blank" rel="noopener">
+          <a href="source/new_img/web/afiche-materias.webp" class="poster-link" aria-label="Ver afiche de materias en grande">
             <img src="source/new_img/web/afiche-materias.webp" alt="Afiche de Nefer Lab con las materias: Matemáticas, Español, Ciencias naturales, Sociales, Física e Inglés académico" width="720" height="1279" loading="lazy">
           </a>
         </div>
-        <p class="posters-note">¿Conoces a alguien que necesite refuerzo? Comparte estos afiches.</p>
+        <p class="posters-note">Toca un afiche para verlo en grande. ¿Conoces a alguien que necesite refuerzo? Compártelos.</p>
+      </div>
+    </section>
+
+    <!-- ====== IDEAS ====== -->
+    <section class="ideas" aria-labelledby="ideas">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="eyebrow">El siguiente capítulo de Nefer Lab</p>
+          <h2 class="section-title" id="ideas">Más formas de <span>aprender juntos</span></h2>
+          <p class="section-sub">Estamos explorando estas ideas. Cuéntanos cuál te gustaría ver hecha realidad; su disponibilidad y condiciones están por definir.</p>
+        </div>
+        <div class="ideas-grid">
+          <article class="idea-card">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Club de programación</h3>
+            <p>Crear juegos y pequeños proyectos para descubrir la lógica y la creatividad detrás del código.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20del%20club%20de%20programacion.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesa el club <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="idea-card">
+            <i class="fa-solid fa-language" aria-hidden="true"></i>
+            <h3>Inglés desde cero</h3>
+            <p>Un espacio para practicar expresiones cotidianas, escuchar y ganar confianza al hablar.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20de%20ingles%20desde%20cero.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesa inglés <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="idea-card">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+            <h3>Aprender a estudiar</h3>
+            <p>Talleres sobre organización, hábitos de estudio y preparación de evaluaciones para estudiantes y familias.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20de%20los%20talleres%20de%20habitos%20de%20estudio.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesan los talleres <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -292,5 +344,29 @@
      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+  <!-- Visor de afiches dentro de la misma página -->
+  <dialog class="poster-viewer" id="poster-viewer" aria-label="Afiche ampliado">
+    <button type="button" class="viewer-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="">
+  </dialog>
+  <script>
+    const posterViewer = document.getElementById('poster-viewer');
+    const posterViewerImage = posterViewer.querySelector('img');
+
+    document.querySelectorAll('.poster-link').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        posterViewerImage.src = link.href;
+        posterViewerImage.alt = link.querySelector('img').alt;
+        posterViewer.showModal();
+      });
+    });
+
+    // Clicking the backdrop (the dialog itself) or the X closes it
+    posterViewer.addEventListener('click', event => {
+      if (event.target === posterViewer || event.target.closest('.viewer-close')) posterViewer.close();
+    });
+  </script>
 </body>
 </html>
