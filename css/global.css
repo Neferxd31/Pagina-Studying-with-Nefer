@@ -19,11 +19,16 @@
   --orange-glow:    rgba(255, 107, 0, 0.25);
   --orange-subtle:  rgba(255, 107, 0, 0.08);
 
-  --dark:           #0D0D0D;
-  --dark-2:         #141414;
-  --dark-card:      #1C1C1C;
-  --dark-border:    #2A2A2A;
-  --dark-hover:     #242424;
+  /* Chalkboard tones taken from the new posters */
+  --dark:           #1E2124;
+  --dark-2:         #191B1E;
+  --dark-card:      #272B2F;
+  --dark-border:    #363B40;
+  --dark-hover:     #2E3337;
+
+  --cream:          #FFF5E1;
+  --cream-ink:      #1A1A1A;
+  --yellow:         #FFD23F;
 
   --white:          #FFFFFF;
   --gray-light:     #E0E0E0;
@@ -34,6 +39,7 @@
   --green-wa-dark:  #128C7E;
 
   --font:       'Poppins', sans-serif;
+  --font-display: 'Fredoka', 'Poppins', sans-serif;
   --radius-sm:  8px;
   --radius:     16px;
   --radius-lg:  24px;
@@ -51,14 +57,19 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font);
   background-color: var(--dark);
+  /* Faint chalk smudges so the page feels like the posters' blackboard */
+  background-image:
+    radial-gradient(ellipse 60% 40% at 15% 10%, rgba(255, 255, 255, 0.035), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 85% 60%, rgba(255, 255, 255, 0.03), transparent 70%);
+  background-attachment: fixed;
   color: var(--white);
   line-height: 1.65;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
+h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; font-family: var(--font-display); }
 a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 p { color: var(--gray); }
 strong { color: var(--white); font-weight: 600; }
 
@@ -67,7 +78,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13, 13, 13, 0.92);
+  background: rgba(25, 27, 30, 0.92);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--dark-border);
@@ -90,23 +101,12 @@ header {
 }
 
 .logo-link img {
-  height: 42px;
-  width: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--orange);
-  box-shadow: 0 0 16px var(--orange-glow);
+  height: 44px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.logo-text {
-  font-size: 1rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--orange), var(--orange-lighter));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  white-space: nowrap;
-}
+.logo-link:hover img { transform: rotate(-3deg) scale(1.04); }
 
 nav {
   display: flex;
@@ -291,6 +291,9 @@ footer {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
   gap: 8px;
   padding: 13px 28px;
   border-radius: 50px;
@@ -301,7 +304,7 @@ footer {
   border: none;
   transition: var(--transition);
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .btn-primary {
@@ -327,8 +330,8 @@ footer {
 }
 
 .btn-whatsapp {
-  background: linear-gradient(135deg, var(--green-wa), var(--green-wa-dark));
-  color: var(--white);
+  background: var(--green-wa);
+  color: var(--dark);
   box-shadow: var(--shadow-wa);
 }
 
@@ -345,16 +348,15 @@ footer {
   z-index: 999;
   width: 58px;
   height: 58px;
-  background: linear-gradient(135deg, var(--green-wa), var(--green-wa-dark));
+  background: var(--green-wa);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--dark);
   font-size: 1.7rem;
   box-shadow: var(--shadow-wa);
   transition: var(--transition);
-  animation: waPulse 2.5s ease-in-out infinite;
 }
 
 .whatsapp-float:hover {
@@ -436,7 +438,7 @@ section { padding: 80px 2rem; }
 .section-header.center .divider { margin-left: auto; margin-right: auto; }
 
 .section-title {
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-size: clamp(1.9rem, 4.4vw, 2.7rem);
   color: var(--white);
   margin-bottom: 8px;
 }
@@ -497,6 +499,32 @@ section { padding: 80px 2rem; }
 .page-hero p {
   font-size: 1rem;
   color: var(--gray);
+}
+
+/* ====== POSTER STYLE (cream sticker cards with orange outline) ====== */
+.sticker {
+  background: var(--cream);
+  color: var(--cream-ink);
+  border: 3px solid var(--orange);
+  border-radius: 22px;
+  box-shadow: 0 6px 0 var(--orange-dark), 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.sticker p { color: #4A4A4A; }
+.sticker strong { color: var(--cream-ink); }
+
+.highlight {
+  background: linear-gradient(transparent 55%, rgba(255, 210, 63, 0.7) 55%);
+  padding: 0 4px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--yellow);
+  margin-bottom: 10px;
 }
 
 /* ====== GRIDS ====== */
@@ -594,4 +622,48 @@ section { padding: 80px 2rem; }
   .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; font-size: 1.5rem; }
 
   .btn { padding: 11px 22px; font-size: 0.88rem; }
+}
+
+/* Acceso por teclado y controles adaptables */
+:focus-visible {
+  outline: 2px solid var(--orange-lighter);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 8px;
+  left: 12px;
+  transform: translateY(calc(-100% - 12px));
+  padding: 10px 16px;
+  background: var(--dark-card);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#contenido {
+  scroll-margin-top: 8rem;
+}
+
+.footer-legal-links {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    padding-block: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

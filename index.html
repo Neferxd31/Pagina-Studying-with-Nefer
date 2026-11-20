@@ -3,252 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studying with Nefer — Asesorías académicas</title>
-  <link rel="icon" href="source/img/logo1.jpeg" type="image/jpeg">
-  <meta name="description" content="Asesorías académicas personalizadas para preescolar, primaria y secundaria. Matemáticas, Lenguaje, Ciencias, Inglés y más.">
+  <title>Nefer Lab — Asesorías en tareas e inglés académico</title>
+  <link rel="icon" href="source/new_img/web/favicon.png" type="image/png">
+  <meta name="description" content="Asesorías en tareas para jardín, preescolar, primaria y secundaria, e inglés académico de 1° a 11°. Presencial, a domicilio y virtual. $20.000 la hora.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
 
   <!-- ====== HEADER ====== -->
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo-link">
-        <img src="source/img/logo1.jpeg" alt="SWN">
-        <span class="logo-text">Studying with Nefer</span>
+        <img src="source/new_img/web/logo.webp" alt="Nefer Lab Asesorías" width="135" height="44">
       </a>
       <nav>
-        <a href="index.html"      class="nav-link active">Inicio</a>
+        <a href="index.html"      class="nav-link active" aria-current="page">Inicio</a>
         <a href="asesorias.html"  class="nav-link">Asesorías</a>
         <a href="contacto.html"   class="nav-link">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <!-- Fondo animado global -->
-  <div class="hero-bg-wrapper" aria-hidden="true">
-    <div class="grid-bg"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <main>
+  <main id="contenido">
 
     <!-- ====== HERO ====== -->
-    <section style="padding:0; background:transparent;">
-      <div class="hero">
-
-        <!-- Contenido -->
+    <section class="hero" aria-labelledby="titulo">
+      <div class="section-inner hero-grid">
         <div class="hero-content">
-          <div class="badge reveal">
-            <i class="fa-solid fa-graduation-cap"></i>
-            Asesorías personalizadas
-          </div>
-
-          <h1 class="reveal reveal-delay-1">
-            Aprende sin<br>
-            <span class="gradient-text">límites</span>
-          </h1>
-
-          <p class="hero-sub reveal reveal-delay-2">
-            Refuerza tus conocimientos con asesorías académicas personalizadas
-            para preescolar, primaria y secundaria. ¡Juntos llegamos más lejos!
+          <p class="eyebrow">Jardín · Preescolar · Primaria · Secundaria</p>
+          <h1 id="titulo">Que la tarea deje de ser <span class="hero-accent">una pelea</span></h1>
+          <p class="hero-sub">
+            Asesorías en tareas y <strong>inglés académico de 1° a 11°</strong>. Explicaciones con paciencia
+            para que tu hijo entienda el tema, no solo que lo entregue.
           </p>
-
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
-               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-whatsapp"></i>
-              Agendar por WhatsApp
+          <div class="hero-actions">
+            <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20agendar%20una%20asesor%C3%ADa%20de%20Nefer%20Lab." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Agendar por WhatsApp
             </a>
-            <a href="asesorias.html" class="btn btn-secondary">
-              Ver servicios
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <a href="#materias" class="btn btn-secondary">¿En qué te ayudo? <span aria-hidden="true">↓</span></a>
           </div>
-
-          <div class="hero-stats reveal reveal-delay-4">
-            <div class="stat">
-              <span class="stat-num">$20K</span>
-              <span class="stat-label">por hora</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat">
-              <span class="stat-num">3</span>
-              <span class="stat-label">niveles educativos</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="stat">
-              <span class="stat-num">6+</span>
-              <span class="stat-label">materias disponibles</span>
-            </div>
-          </div>
+          <ul class="hero-facts">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Presencial</li>
+            <li><i class="fa-solid fa-motorcycle" aria-hidden="true"></i> A domicilio</li>
+            <li><i class="fa-solid fa-laptop" aria-hidden="true"></i> Virtual</li>
+          </ul>
         </div>
 
-        <!-- Ilustración -->
-        <div class="hero-visual reveal reveal-delay-2">
-          <div class="hero-ring">
-            <img src="source/img/logo1.jpeg" alt="Studying with Nefer" class="hero-logo-img">
-
-            <div class="float-badge fb-math">
-              <i class="fa-solid fa-calculator"></i> Matemáticas
-            </div>
-            <div class="float-badge fb-lang">
-              <i class="fa-solid fa-book-open"></i> Lenguaje
-            </div>
-            <div class="float-badge fb-code">
-              <i class="fa-solid fa-code"></i> Programación
-            </div>
+        <div class="hero-visual">
+          <img class="hero-photo" src="source/new_img/web/escritorio-lampara.webp" alt="Escritorio de estudio de Nefer Lab con libros, lámpara y computador" width="1280" height="720">
+          <img class="hero-mascot" src="source/new_img/web/cerebro.webp" alt="" width="390" height="320">
+          <div class="hero-price sticker">
+            <span>Desde</span>
+            <strong>$20.000</strong>
+            <span>la hora</span>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ====== SOBRE NEFER ====== -->
-    <section class="about-section">
+    <!-- ====== DOLORES ====== -->
+    <section class="pains" aria-labelledby="te-suena">
       <div class="section-inner">
-        <div class="about-grid">
+        <h2 class="section-title center-text" id="te-suena">¿Te <span>suena</span> familiar?</h2>
+        <ul class="pains-grid">
+          <li><span aria-hidden="true">🌙</span> Son las 9 de la noche y la tarea sigue sin terminar.</li>
+          <li><span aria-hidden="true">📝</span> Mañana hay evaluación y el tema todavía no se entiende.</li>
+          <li><span aria-hidden="true">🗣️</span> El inglés del colegio se volvió cuesta arriba.</li>
+          <li><span aria-hidden="true">⏰</span> Quieres ayudar, pero no te da el tiempo o no recuerdas el tema.</li>
+        </ul>
+        <p class="pains-answer">Para eso está <strong>Nefer Lab</strong>: acompañamiento cercano, a tu ritmo y donde te quede más cómodo.</p>
+      </div>
+    </section>
 
-          <div class="reveal">
-            <div class="badge">
-              <i class="fa-solid fa-user-graduate"></i>
-              Tu tutora
-            </div>
-            <h2 class="section-title">Hola, soy <span>Nefer</span></h2>
-            <div class="divider"></div>
-            <p>Soy estudiante de <strong>Ingeniería de Sistemas</strong> en la UFPS y tecnólogo en
-              <strong>Análisis y Desarrollo de Software</strong> del SENA.</p>
-            <p style="margin-top:12px;">Mi pasión es enseñar y ayudarte a entender esos temas que parecen difíciles.
-              Con paciencia y metodología clara, hacemos que aprender sea posible y divertido.</p>
-            <div class="about-tags">
-              <span class="tag"><i class="fa-solid fa-laptop-code"></i> UFPS — Ing. Sistemas</span>
-              <span class="tag"><i class="fa-solid fa-code"></i> SENA — ADSO</span>
-              <span class="tag"><i class="fa-solid fa-heart"></i> Apasionada por enseñar</span>
-              <span class="tag"><i class="fa-solid fa-wifi"></i> Virtual · Nacional</span>
-            </div>
-          </div>
-
-          <div class="feature-list reveal reveal-delay-2">
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-              <div>
-                <h4>Clases personalizadas</h4>
-                <p>Adaptadas a tu ritmo y estilo de aprendizaje único</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fa-solid fa-clock"></i></div>
-              <div>
-                <h4>Horarios flexibles</h4>
-                <p>Coordinamos la sesión según tu disponibilidad</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
-              <div>
-                <h4>Resultados reales</h4>
-                <p>Seguimiento continuo de tu progreso académico</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <div>
-                <h4>Atención directa</h4>
-                <p>Contacto por WhatsApp para resolver dudas</p>
-              </div>
-            </div>
-            <div class="feature-item">
-              <div class="feat-icon"><i class="fa-solid fa-earth-americas"></i></div>
-              <div>
-                <h4>Modalidad virtual — nivel nacional</h4>
-                <p>Asesorías online desde cualquier parte de Colombia</p>
-              </div>
-            </div>
-          </div>
-
+    <!-- ====== SERVICIOS ====== -->
+    <section class="services" aria-labelledby="servicios">
+      <div class="section-inner">
+        <div class="section-header center">
+          <p class="eyebrow">Lo que hacemos</p>
+          <h2 class="section-title" id="servicios">Dos formas de <span>ayudarte</span></h2>
+        </div>
+        <div class="services-grid">
+          <article class="service sticker">
+            <div class="service-emoji" aria-hidden="true">📚✏️</div>
+            <h3>Asesorías en tareas</h3>
+            <p>Tareas, talleres, guías y preparación de evaluaciones en todas las materias del colegio.</p>
+            <p class="service-levels"><span class="highlight">Jardín · Preescolar · Primaria · Secundaria</span></p>
+            <a class="service-link" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20una%20asesor%C3%ADa%20en%20tareas." target="_blank" rel="noopener noreferrer">Quiero apoyo en tareas <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service sticker">
+            <div class="service-emoji" aria-hidden="true">🎓🌎</div>
+            <h3>Inglés académico</h3>
+            <p>Gramática, vocabulario, lectura y las actividades de inglés que dejan en clase.</p>
+            <p class="service-levels"><span class="highlight">De 1° a 11°</span></p>
+            <a class="service-link" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20una%20asesor%C3%ADa%20de%20ingl%C3%A9s%20acad%C3%A9mico." target="_blank" rel="noopener noreferrer">Quiero apoyo en inglés <span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ====== MATERIAS ====== -->
-    <section class="subjects-section">
-      <div class="section-inner">
-        <div class="section-header center reveal">
-          <div class="badge"><i class="fa-solid fa-book-open"></i> Materias</div>
-          <h2 class="section-title">¿En qué te <span>ayudamos?</span></h2>
-          <div class="divider"></div>
-          <p class="section-sub">Cubrimos las principales materias del currículo escolar colombiano</p>
+    <section class="subjects" id="materias" aria-labelledby="materias-titulo">
+      <div class="section-inner subjects-grid">
+        <div class="subjects-intro">
+          <p class="eyebrow">Se hacen asesorías en</p>
+          <h2 class="section-title" id="materias-titulo">Elige tu <span>materia</span></h2>
+          <p class="section-sub">Toca una materia y escríbeme directamente con el tema que necesitas.</p>
+          <img class="subjects-mascot" src="source/new_img/web/cerebro.webp" alt="" width="390" height="320" loading="lazy">
         </div>
+        <ul class="subject-list">
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20Matem%C3%A1ticas." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🧮</span> Matemáticas</a></li>
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20Espa%C3%B1ol." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">📖</span> Español</a></li>
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20Ciencias%20naturales." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🧪</span> Ciencias naturales</a></li>
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20Sociales." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🌎</span> Sociales</a></li>
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20F%C3%ADsica." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⚛️</span> Física</a></li>
+          <li><a class="subject-pill" href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Necesito%20ayuda%20en%20Ingl%C3%A9s%20acad%C3%A9mico." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">💬</span> Inglés académico</a></li>
+          <li class="subject-extra">También: Química · Estadística · Programación</li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="subjects-grid">
-          <div class="card subject-card reveal reveal-delay-1">
-            <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
-            <h3>Matemáticas</h3>
-            <p>Aritmética, álgebra, geometría, trigonometría y cálculo</p>
-          </div>
-          <div class="card subject-card reveal reveal-delay-2">
-            <div class="card-icon"><i class="fa-solid fa-feather-pointed"></i></div>
-            <h3>Lenguaje</h3>
-            <p>Comprensión lectora, escritura, gramática y ortografía</p>
-          </div>
-          <div class="card subject-card reveal reveal-delay-3">
-            <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
-            <h3>Ciencias naturales</h3>
-            <p>Biología, química, física y medio ambiente</p>
-          </div>
-          <div class="card subject-card reveal reveal-delay-1">
-            <div class="card-icon"><i class="fa-solid fa-earth-americas"></i></div>
-            <h3>Ciencias sociales</h3>
-            <p>Historia, geografía, ciudadanía y constitución</p>
-          </div>
-          <div class="card subject-card reveal reveal-delay-2">
-            <div class="card-icon"><i class="fa-solid fa-language"></i></div>
-            <h3>Inglés</h3>
-            <p>Gramática, vocabulario, comprensión y conversación</p>
-          </div>
-          <div class="card subject-card reveal reveal-delay-3">
-            <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-            <h3>Programación</h3>
-            <p>Fundamentos de programación y lógica computacional</p>
-          </div>
+    <!-- ====== MODALIDADES ====== -->
+    <section class="modes" aria-labelledby="modalidades">
+      <div class="section-inner">
+        <div class="section-header center">
+          <p class="eyebrow">Tú eliges dónde</p>
+          <h2 class="section-title" id="modalidades">Presencial, a domicilio <span>o virtual</span></h2>
+          <p class="section-sub">El mismo precio en las tres modalidades: <strong>$20.000 COP la hora</strong>.</p>
+        </div>
+        <div class="modes-grid">
+          <article class="mode-card">
+            <div class="mode-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <h3>Presencial</h3>
+            <p>Calle 35 # 2-29, Barrio 12 de Octubre.</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2035%20%232-29%20Barrio%2012%20de%20Octubre%20C%C3%BAcuta" target="_blank" rel="noopener noreferrer">Ver en el mapa <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="mode-card">
+            <div class="mode-icon"><i class="fa-solid fa-motorcycle" aria-hidden="true"></i></div>
+            <h3>A domicilio</h3>
+            <p>Voy hasta tu casa. Escríbeme tu barrio y coordinamos.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20una%20asesor%C3%ADa%20a%20domicilio.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener noreferrer">Pedir a domicilio <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="mode-card">
+            <div class="mode-icon"><i class="fa-solid fa-laptop" aria-hidden="true"></i></div>
+            <h3>Virtual</h3>
+            <p>Por videollamada, desde cualquier ciudad de Colombia.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20una%20asesor%C3%ADa%20virtual." target="_blank" rel="noopener noreferrer">Agendar virtual <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ====== PRECIO ====== -->
-    <section class="pricing-cta">
-      <div class="section-inner">
-        <div class="pricing-card reveal">
-          <div class="badge">
-            <i class="fa-solid fa-tag"></i>
-            Tarifa única
-          </div>
-          <h2>Invierte en tu aprendizaje</h2>
-          <div class="price-display">
-            <span class="p-currency">$</span>
-            <span class="p-amount">20.000</span>
-            <span class="p-period">/ hora</span>
-          </div>
-          <p class="desc">
-            Una tarifa justa y accesible para que el conocimiento no tenga barreras.
-            Sin costos ocultos, sin sorpresas.
-          </p>
-          <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
-             class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i>
-            Agendar ahora
-          </a>
+    <!-- ====== AGENDAR ====== -->
+    <section class="booking" id="agendar" aria-labelledby="agendar-titulo">
+      <div class="section-inner booking-grid">
+        <div>
+          <p class="eyebrow">Agenda en un minuto</p>
+          <h2 class="section-title" id="agendar-titulo">Arma tu <span>mensaje</span></h2>
+          <ol class="booking-steps">
+            <li><span><strong>Elige</strong> el nivel, la materia y la modalidad.</span></li>
+            <li><span><strong>Envía</strong> el mensaje por WhatsApp.</span></li>
+            <li><span><strong>Acordamos</strong> el horario y empezamos.</span></li>
+          </ol>
+        </div>
+
+        <form class="booking-form sticker" id="booking-form">
+          <label>
+            Nivel
+            <select name="level">
+              <option>Jardín</option>
+              <option>Preescolar</option>
+              <option selected>Primaria</option>
+              <option>Secundaria</option>
+            </select>
+          </label>
+          <label>
+            Materia
+            <select name="subject">
+              <option>Tareas en general</option>
+              <option>Matemáticas</option>
+              <option>Español</option>
+              <option>Ciencias naturales</option>
+              <option>Sociales</option>
+              <option>Física</option>
+              <option>Inglés académico</option>
+              <option>Química</option>
+              <option>Estadística</option>
+              <option>Programación</option>
+            </select>
+          </label>
+          <label>
+            Modalidad
+            <select name="mode">
+              <option>presencial</option>
+              <option>a domicilio</option>
+              <option>virtual</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== SOBRE MÍ ====== -->
+    <section class="about" aria-labelledby="sobre-nefer">
+      <div class="section-inner about-grid">
+        <img class="about-photo" src="source/new_img/web/escritorio-portatil.webp" alt="Escritorio de Nefer Lab con portátil, apuntes y colores" width="900" height="900" loading="lazy">
+        <div>
+          <p class="eyebrow">Quién te acompaña</p>
+          <h2 class="section-title" id="sobre-nefer">Hola, soy <span>Nefer</span></h2>
+          <p>Soy estudiante de <strong>Ingeniería de Sistemas</strong> en la UFPS.</p>
+          <p>Me gusta enseñar con paciencia y buscar la explicación que le funcione a cada estudiante, porque no todos aprendemos igual.</p>
+          <a class="btn btn-secondary" href="contacto.html">Conóceme y escríbeme <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
+    <!-- ====== IDEAS ====== -->
+    <section class="ideas" aria-labelledby="ideas">
+      <div class="section-inner">
+        <div class="section-header">
+          <p class="eyebrow">El siguiente capítulo de Nefer Lab</p>
+          <h2 class="section-title" id="ideas">Más formas de <span>aprender juntos</span></h2>
+          <p class="section-sub">Estamos explorando estas ideas. Cuéntanos cuál te gustaría ver hecha realidad; su disponibilidad y condiciones están por definir.</p>
+        </div>
+        <div class="ideas-grid">
+          <article class="idea-card">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Club de programación</h3>
+            <p>Crear juegos y pequeños proyectos para descubrir la lógica y la creatividad detrás del código.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20del%20club%20de%20programacion.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesa el club <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="idea-card">
+            <i class="fa-solid fa-language" aria-hidden="true"></i>
+            <h3>Inglés desde cero</h3>
+            <p>Un espacio para practicar expresiones cotidianas, escuchar y ganar confianza al hablar.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20de%20ingles%20desde%20cero.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesa inglés <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="idea-card">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+            <h3>Aprender a estudiar</h3>
+            <p>Talleres sobre organización, hábitos de estudio y preparación de evaluaciones para estudiantes y familias.</p>
+            <a href="https://wa.me/573148548544?text=Hola%2C%20me%20interesa%20la%20idea%20de%20los%20talleres%20de%20habitos%20de%20estudio.%20Quisiera%20saber%20mas%20si%20se%20desarrolla." target="_blank" rel="noopener noreferrer">Me interesan los talleres <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PREGUNTAS FRECUENTES ====== -->
+    <section class="faq" aria-labelledby="preguntas">
+      <div class="section-inner faq-inner">
+        <div class="section-header center">
+          <h2 class="section-title" id="preguntas">Preguntas <span>frecuentes</span></h2>
+        </div>
+        <details>
+          <summary>¿Cuánto cuesta una asesoría?</summary>
+          <p>$20.000 COP por hora, igual en presencial, a domicilio y virtual.</p>
+        </details>
+        <details>
+          <summary>¿Dónde son las clases presenciales?</summary>
+          <p>En la Calle 35 # 2-29, Barrio 12 de Octubre. Si prefieres, también voy a tu casa.</p>
+        </details>
+        <details>
+          <summary>¿Para qué edades son?</summary>
+          <p>Para estudiantes de jardín, preescolar, primaria y secundaria. Inglés académico de 1° a 11°.</p>
+        </details>
+        <details>
+          <summary>¿Cómo es una asesoría?</summary>
+          <p>Trabajamos la tarea o el tema juntos: explico con ejemplos, practicamos y resolvemos dudas hasta que quede claro.</p>
+        </details>
+        <details>
+          <summary>¿Qué debo tener a mano para la asesoría?</summary>
+          <p>Los cuadernos, guías o la tarea que se va a trabajar. Si sabes la fecha de la evaluación, cuéntamela al agendar.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ====== CTA FINAL ====== -->
+    <section class="final-cta">
+      <div class="section-inner final-cta-box sticker">
+        <h2>¿Empezamos esta semana?</h2>
+        <p>Escríbeme y coordinamos el horario que mejor te funcione.</p>
+        <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20agendar%20una%20asesor%C3%ADa%20de%20Nefer%20Lab." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp 314 854 8544
+        </a>
+      </div>
+    </section>
   </main>
 
   <!-- ====== FOOTER ====== -->
@@ -256,11 +303,10 @@
     <div class="footer-body">
       <div class="footer-brand">
         <a href="index.html" class="logo-link">
-          <img src="source/img/logo1.jpeg" alt="SWN">
-          <span class="logo-text">Studying with Nefer</span>
+          <img src="source/new_img/web/logo.webp" alt="Nefer Lab Asesorías" width="135" height="44">
         </a>
-        <p>Asesorías académicas personalizadas para preescolar, primaria y secundaria. Modalidad virtual a nivel nacional.</p>
-        <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+        <p>Asesorías en tareas e inglés académico para jardín, preescolar, primaria y secundaria. Presencial, a domicilio y virtual.</p>
+        <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20consultar%20disponibilidad%20para%20una%20asesor%C3%ADa%20de%20Nefer%20Lab."
            class="footer-wa" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-whatsapp"></i> Escríbeme
         </a>
@@ -282,7 +328,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 <span>Studying with Nefer</span>. Todos los derechos reservados.</p>
+      <p>© 2026 <span>Nefer Lab</span>. Todos los derechos reservados.</p>
       <div class="footer-legal-links">
         <a href="tratamiento-datos.html">Tratamiento de datos</a>
         <a href="politica-privacidad.html">Política de privacidad</a>
@@ -291,23 +337,33 @@
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/573148548544?text=Hola%20Nefer!%20Quiero%20un%20servicio%20de%20asesor%C3%ADa%20de%20tareas.%20%C2%BFMe%20puedes%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
+  <a href="https://wa.me/573148548544?text=Hola%2C%20Nefer.%20Quisiera%20consultar%20disponibilidad%20para%20una%20asesor%C3%ADa%20de%20Nefer%20Lab."
      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-
   <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
-    }, { threshold: 0.1 })
+    // Arma el mensaje de WhatsApp con lo que el acudiente eligió
+    document.getElementById('booking-form').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = new FormData(event.target);
+      const message = `Hola, Nefer. Quisiera agendar una asesoría de ${form.get('subject')} para ${form.get('level')}, modalidad ${form.get('mode')}.`;
+      window.open(`https://wa.me/573148548544?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+    });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
-
-    // Activar hero inmediatamente
-    setTimeout(() => {
-      document.querySelectorAll('.hero .reveal, .hero-bg-wrapper').forEach(el => el.classList.add('visible'))
-    }, 80)
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if ('IntersectionObserver' in window && !motionPreference.matches) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.remove('awaiting-reveal');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.pains-grid li, .service, .subject-pill, .mode-card, .booking-form, .about-grid, .idea-card, .faq details').forEach(element => {
+        element.classList.add('scroll-reveal', 'awaiting-reveal');
+        revealObserver.observe(element);
+      });
+    }
   </script>
 </body>
 </html>

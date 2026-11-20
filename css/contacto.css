@@ -7,7 +7,7 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 880px;
   margin: 0 auto;
@@ -37,11 +37,13 @@
 .contact-card.wa::after   { background: linear-gradient(90deg, var(--green-wa), var(--green-wa-dark)); }
 .contact-card.mail::after { background: linear-gradient(90deg, var(--orange), var(--orange-lighter)); }
 .contact-card.li::after   { background: linear-gradient(90deg, #0A66C2, #0077B5); }
+.contact-card.map::after  { background: linear-gradient(90deg, var(--yellow), var(--orange)); }
 
 .contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .contact-card.wa:hover   { border-color: rgba(37,211,102,0.4); box-shadow: 0 8px 32px rgba(37,211,102,0.2); }
 .contact-card.mail:hover { border-color: rgba(255,107,0,0.4); box-shadow: var(--shadow-orange); }
 .contact-card.li:hover   { border-color: rgba(10,102,194,0.4); box-shadow: 0 8px 32px rgba(10,102,194,0.2); }
+.contact-card.map:hover  { border-color: rgba(255,210,63,0.4); }
 
 .contact-card:hover::after { opacity: 1; }
 
@@ -60,6 +62,7 @@
 .contact-card.wa   .contact-icon-wrap { background: rgba(37,211,102,0.12); color: var(--green-wa); }
 .contact-card.mail .contact-icon-wrap { background: rgba(255,107,0,0.12);  color: var(--orange); }
 .contact-card.li   .contact-icon-wrap { background: rgba(10,102,194,0.12); color: #4A9FDF; }
+.contact-card.map  .contact-icon-wrap { background: rgba(255,210,63,0.12); color: var(--yellow); }
 
 .contact-card:hover .contact-icon-wrap { transform: scale(1.1); }
 .contact-card.wa:hover   .contact-icon-wrap { background: rgba(37,211,102,0.22); }
@@ -106,6 +109,7 @@
 .contact-card.wa   .contact-btn { background: rgba(37,211,102,0.15); color: var(--green-wa); border: 1px solid rgba(37,211,102,0.3); }
 .contact-card.mail .contact-btn { background: rgba(255,107,0,0.12);  color: var(--orange);   border: 1px solid rgba(255,107,0,0.3); }
 .contact-card.li   .contact-btn { background: rgba(10,102,194,0.12); color: #4A9FDF;          border: 1px solid rgba(10,102,194,0.3); }
+.contact-card.map  .contact-btn { background: rgba(255,210,63,0.12); color: var(--yellow);    border: 1px solid rgba(255,210,63,0.3); }
 
 .contact-card.wa:hover   .contact-btn { background: rgba(37,211,102,0.25); }
 .contact-card.mail:hover .contact-btn { background: rgba(255,107,0,0.22); }
